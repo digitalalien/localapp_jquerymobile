@@ -7,7 +7,7 @@ $(function(){
     window.fbAsyncInit = function() {
       // init the FB JS SDK
       Parse.FacebookUtils.init({
-        appId      : '696227950461409', // Facebook App ID
+        appId      : '696260057124865', // Facebook App ID
         channelUrl : '', // Channel File
         status     : true, // check login status
         cookie     : true, // enable cookies to allow Parse to access the session
