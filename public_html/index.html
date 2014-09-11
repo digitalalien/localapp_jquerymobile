@@ -13,7 +13,7 @@ and open the template in the editor.
     <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 </head>
     <body>
-        <div data-role="page">
+        <div data-role="page" id="eventList">
             <div data-role="header">
                 <a href="#" class="ui-btn">Home</a>
                 <h1>Feed</h1>
@@ -22,7 +22,7 @@ and open the template in the editor.
             <div data-role="content">
                 <h2>My Events</h2>
                 <ul data-role="listview" data-inset="true">
-                    <li><a href="#">Acura</a></li>
+                    <li><a href="#eventDetails" data-transition="slide">Acura</a></li>
                     <li><a href="#">Audi</a></li>
                     <li><a href="#">Cadillac</a></li>
                     <li><a href="#">Dodge</a></li>
@@ -44,6 +44,16 @@ and open the template in the editor.
             <div data-role="footer">
                 <h4>My Footer</h4>
             </div>
+        </div>
+        <div data-role="page" id="eventDetails">
+            <div data-role="header">
+                <a href="#eventList" data-role="button" data-transition="slide">Back</a>
+                <h1>Event Name</h1>
+            </div>
+            <div data-role="content">
+                Event Details
+            </div>
+            <div data-role="footer"></div>
         </div>
     </body>
 </html>
