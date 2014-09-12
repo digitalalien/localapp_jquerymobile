@@ -9,19 +9,20 @@ and open the template in the editor.
     <title>My Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
-    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="js/libs/requirejs/require.js" data-main="js/mobile"></script>
+<!--    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
     <script src="js/libs/underscore/underscore-min.js"></script>
     <script src="js/libs/parse/parse-1.3.0.min.js"></script>
     
-    <script src="js/controller/app.js"></script>
-    <script src="js/view/loginView.js"></script>
+    <script src="js/controllers/app.js"></script>
+    <script src="js/views/loginView.js"></script>-->
 </head>
     <body>
         <!--Facebook Integration -->
         <div id="fb-root"></div>
         <!-- App Interface -->
-         <div data-role="page" id="login-view">
+         <div data-role="page" id="login">
             <div data-role="header">
                 <h1>LocalAppenings</h1>
             </div>
@@ -32,36 +33,18 @@ and open the template in the editor.
             </div> 
         </div>
         
-        <div data-role="page" id="eventApp">
+        <div data-role="page" id="events">
             <div data-role="header">
                 <a href="#" class="ui-btn">Home</a>
                 <h1>Feed</h1>
                 <a href="#" class="ui-btn">Settings</a>
             </div>
-            <div data-role="content">
-                <h2>My Events</h2>
-                <ul data-role="listview" data-inset="true">
-                    <li><a href="#eventDetails" data-transition="slide">Acura</a></li>
-                    <li><a href="#">Audi</a></li>
-                    <li><a href="#">Cadillac</a></li>
-                    <li><a href="#">Dodge</a></li>
-                    <li><a href="#">Ford</a></li>
-                    <li><a href="#">Hyundai</a></li>
-                    <li><a href="#">Jaguar</a></li>
-                </ul>
-                <h2>Events</h2>
-                <ul data-role="listview" data-inset="true">
-                    <li><a href="#">Acura</a></li>
-                    <li><a href="#">Audi</a></li>
-                    <li><a href="#">Cadillac</a></li>
-                    <li><a href="#">Dodge</a></li>
-                    <li><a href="#">Ford</a></li>
-                    <li><a href="#">Hyundai</a></li>
-                    <li><a href="#">Jaguar</a></li>
-                </ul>
-            </div>
-            <div data-role="footer">
-                <h4>My Footer</h4>
+            <div data-role="content" id="events-container">
+                <script type="text/template" id="events-template">
+                     <ul id="events-list">
+                        <img src='images/spinner.gif' class='spinner' />
+                      </ul>
+                </script>
             </div>
         </div>
         <div data-role="page" id="eventDetails">

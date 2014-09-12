@@ -5,10 +5,12 @@ require.config( {
       paths: {
 
             // Core Libraries
-            "jquery": "libs/jquery",
-            "jquerymobile": "libs/jquerymobile",
-            "underscore": "libs/lodash",
-            "backbone": "libs/backbone"
+            "jquery": "libs/jquery/jquery-1.11.1.min",
+            "jquerymobile": "libs/jquerymobile/jquery.mobile-1.4.3.min",
+            "underscore": "libs/underscore/underscore-min",
+            "backbone": "libs/backbone/backbone-min",
+            "parse": "libs/parse/parse-1.3.0.min",
+            "appinit": "controllers/app"
 
       },
 
@@ -18,6 +20,14 @@ require.config( {
             "backbone": {
                   "deps": [ "underscore", "jquery" ],
                   "exports": "Backbone"  //attaches "Backbone" to the window object
+            },
+            "parse":{
+                "deps": ["underscore", "backbone", "jquery"],
+                "exports": "Parse"
+            },
+            "appinit":{
+                "deps": ["jquery", "parse"],
+                "exposrts": "AppInit"
             }
 
       } // end Shim Configuration
